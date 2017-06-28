@@ -1,4 +1,3 @@
-
 * {
 	box-sizing: border-box;
 }
@@ -8,7 +7,12 @@ html, body, div {
 	margin: 0;
 }
 
-.game-container {
+body {
+	background: #000;
+	color: #fff;
+}
+
+.game-container, .start-container {
 	width: 590px;
 	height: 600px;
 	margin: 0 auto;
@@ -18,13 +22,48 @@ html, body, div {
 	box-sizing: content-box;
 }
 
+.start-container {
+	background: url(../images/bg_start.png);
+	background-size: cover;
+	width: 390px;
+	padding-top: 200px;
+	box-sizing: border-box;
+}
+
+.start-container p {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.start-container p button {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-family: 微软雅黑;
+	border: 0;
+	border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+	background: lightblue;
+}
+
+.start-container p button:hover {
+	background: lightcoral;
+}
+
+.game-container {
+	display: none;
+}
+
 .game-main-panel {
 	position: absolute;
 	left: 100px;
 	top: 0;
 	width: 390px;
 	height: 600px;
-	border: 1px solid red;
+	border-left: 1px solid green;
+	border-right: 1px solid green;
 }
 
 .timer-panel {

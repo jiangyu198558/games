@@ -19,10 +19,15 @@
 		return new DomObject((context || document).querySelector(selector));
 	}
 
+	function startGame(){
+		new Board();
+	}
+
 	function _init() {
 		$('#btn-start').on('click', function(ev){
 			$('.start-container').css('display', 'none');
 			$('.game-container').css('display', 'block');
+			startGame();
 		});
 
 		$('#btn-setting').on('click', function(ev){
